@@ -6,6 +6,10 @@ public class main{
 
     public static void main(String[] args){
 
+	boolean go = true;
+
+	while(go){
+
 	Scanner scan = new Scanner(System.in);
 
 	System.out.println("Welcome to name!");
@@ -23,10 +27,21 @@ public class main{
 	System.out.println("Would you like to add more users?");
 
         String choice = scan.nextLine();
-
+	
 	System.out.println("You said " + choice); 
+	
+	if(choice.equalsIgnoreCase("no")){
 
-    }  
+		go = false;
+
+	    }
+	}
+    }
+
+    public static void newUser(){
+    
+	
+    }
 
 
 }
