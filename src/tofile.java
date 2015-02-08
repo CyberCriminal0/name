@@ -8,12 +8,14 @@ public class tofile{
 
 	try
 	    {
-         FileOutputStream fileOut = new FileOutputStream(c.getID() + ".name");
+         File dir = new File("names");
+	 dir.mkdir();
+         FileOutputStream fileOut = new FileOutputStream("names/" + c.getID() + ".name");
          ObjectOutputStream out = new ObjectOutputStream(fileOut);
          out.writeObject(c);
          out.close();
          fileOut.close();
-         System.out.println("Saved to: " + c.getID() + ".name");
+         System.out.println("Saved to: names/" + c.getID() + ".name");
 	    }catch(IOException i)
 	    {
 		i.printStackTrace();
