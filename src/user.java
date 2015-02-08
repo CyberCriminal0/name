@@ -1,6 +1,6 @@
 //Written by Jack Eller
 
-public class user{
+public class user implements java.io.Serializable{
 
     String name;
     int id;
