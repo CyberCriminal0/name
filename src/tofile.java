@@ -8,12 +8,12 @@ public class tofile{
 
 	try
 	    {
-         FileOutputStream fileOut = new FileOutputStream("//people/" + c.getID() + ".name");
+         FileOutputStream fileOut = new FileOutputStream(c.getID() + ".name");
          ObjectOutputStream out = new ObjectOutputStream(fileOut);
          out.writeObject(c);
          out.close();
          fileOut.close();
-         System.out.println("Saved to " + "//people/" + c.getID() + ".name");
+         System.out.println("Saved to: " + c.getID() + ".name");
 	    }catch(IOException i)
 	    {
 		i.printStackTrace();
